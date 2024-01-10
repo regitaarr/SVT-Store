@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>SVT Store</title>
+{% endblock %}
+{% block body %}
+  <div class="hero_area">
+      <div class="header_top">
+        <div class="container-fluid">
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <img src="https://pbs.twimg.com/media/F8UYUZ8asAAAA1d?format=png&name=240x240" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" style="color: black;" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="album">Album</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="keranjang">Keranjang</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="proses">Status</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <a href="/logout" class="btn btn-primary" style="margin-left: 8px;">Logout</a>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="mv">
+      <div class="container " style="margin-top: 80px;">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="detail-box">
+              <h1>
+                SEVENTEEN Resmi Comeback dengan ‘God Of Music’  dari Album ke 11 dan Trending di Youtube
+              </h1>
+              <p>
+                SEVENTEEN mencatatkan rekor sebesar 5,2 juta pre-order untuk mini album ke-11 mereka yang rilis hari ini, 23 Oktober 2023.
+                Ini adalah angka terbesar untuk pemesanan album K-pop sepanjang sejarah.
+                Mengutip Star News Korea, menurut distributor album YG PLUS, jumlah pemesanan domestik dan internasional mencapai 5.206.718 album.
+              </p>
+              <a href="https://youtu.be/zSQ48zyWZrY?si=MZYN6H_61_TfNhrI" target="_blank" 
+              class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">View</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="https://pbs.twimg.com/media/F9Gsl0gbAAAlURv?format=jpg&name=large" width="100%" height="100%" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="spotify">
+    <div class="container" style="padding-top: 50px;">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="https://media.ktown4u.com/products/resize/thumbnail/2023/09/20/9Dc2Tb.jpg" width="100%" height="100%" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="detail-box">
+            <h1>
+              Seventeen <br>Jadi 'God of Music', Inilah Daftar Lagu di Album Seventeenth Heaven
+            </h1>
+            <p>
+              SEVENTEEN merilis track list mini album "SEVENTEENTH HEAVEN" pada Senin (16/10) dan menuai beragam reaksi Knetz.
+              8 track list tersebut yaitu SOS, "음악의 신 (God of Music)", "Diamond", "Back to Back", "Monster", "Yawn", "Headliner", dan "God of Music Inst".
+            </p>
+            <a href="https://open.spotify.com/intl-id/album/1rE0Gy69MFUh4GuXafWd0f?si=BnqJ0KeWQbKdUdttrWip8Q" target="_blank"
+            class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Listen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="info_section">
+    <div class="social-box" style="margin-left: 400px;">
+      <div class="caption" style="margin-left: 130px;">
+        <h4>
+          Follow Us
+        </h4>
+      </div>
+      <div class="box" style="margin-bottom: 80px;">
+        <a href="https://www.facebook.com/seventeennews/?locale=id_ID" class="btn btn-outline-info">Facebook</button></a>
+        <a href="https://x.com/pledis_17?s=20"class="btn btn-outline-info">Twitter</button></a>
+        <a href="https://youtube.com/@pledis17?si=ZQCXIrbJzDdSbRPb" class="btn btn-outline-info">Youtube</button></a>
+        <a href="https://www.instagram.com/saythename_17/" class="btn btn-outline-info">Instagram</button></a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

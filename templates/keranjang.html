@@ -1,0 +1,175 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>SVT Store</title>
+{% endblock %}
+{% block body %}
+<style>
+    .masthead {
+    background-color: #576CBC; /* Set the desired background color */
+    color: #fff; /* Set the desired text color */
+  }
+  #featured {
+    color: #fff; /* Set the text color to white */
+  }
+  .kelas .btn-primary {
+    margin-bottom: 20px; /* You can adjust the value to increase or decrease the space */
+  }
+  .small-img-group{
+    display: flex;
+    justify-content: space-between;
+  }
+  .small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+    padding: 2px;
+  }
+</style>
+<div class="main-content" href="keranjang.html">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://pbs.twimg.com/media/F8UYUZ8asAAAA1d?format=png&name=240x240" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: black;" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="album">Album</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="keranjang">Keranjang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="proses">Status</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a href="/logout" class="btn btn-primary" style="margin-left: 8px;">Logout</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <section class="container langganan-paket my-5 pt-5">
+    <div class="row mt-5">
+        <div class="col-lg-5 col-md6 col-sm-12">
+            <img class="img-fluid w-100 pb-1" src="https://cdn-contents.weverseshop.io/public/shop/f8ac8a0eacae5e3c3f0b6a9bf33b4cf3.png?q=95&w=720" id="main-img"/>
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="https://cdn-contents.weverseshop.io/public/shop/98f1984478a759070fc27ba389813395.png?q=95&w=720" width="100%" class="small-img"/>
+                </div>
+                <div class="small-img-col">
+                    <img src="https://cdn-contents.weverseshop.io/public/shop/16a5a5f0b2361e59bf0b57a19b2adf59.png?q=95&w=720" width="100%" class="small-img"/>
+                </div>
+                <div class="small-img-col">
+                    <img src="https://cdn-contents.weverseshop.io/public/shop/79906fcd4b318f6df0d9a9963f7877f4.png?q=95&w=720" width="100%" class="small-img"/>
+                </div>
+                <div class="small-img-col">
+                    <img src="https://cdn-contents.weverseshop.io/public/shop/ab17aa278576f0e6a06dfcba62c24de7.png?q=95&w=720" width="100%" class="small-img"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <h6><b>Pilih Album</b></h6>
+            <h3 class="py-2">11th Mini Album 'SEVENTEENTH HEAVEN' Carat Ver. (Random)</h3>
+            <h2>Rp.160.000</h2>
+            <p>-klik gambar album untuk mengetahui harganya-</p>
+            <div class="card-body">
+                <form action="{{url_for('keranjang') }}" method="post">
+                    <div class="msg">{{ msg }}</div>
+                        <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input id="nama" name="nama" type="text" placeholder="Masukkan nama kamu" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pilihan Album</label>
+                            <select name="album" id="album" class="form-control">
+                              <option value="" disabled selected>Pilih album</option>
+                              <option value="11th Mini Album 'SEVENTEENTH HEAVEN' Carat Ver. (Random)">11th Mini Album 'SEVENTEENTH HEAVEN' Carat Ver. (Random)</option>
+                              <option value="11th Mini Album 'SEVENTEENTH HEAVEN' (Set)">11th Mini Album 'SEVENTEENTH HEAVEN' (Set)</option>
+                              <option value="11th Mini Album 'SEVENTEENTH HEAVEN' (Random)">11th Mini Album 'SEVENTEENTH HEAVEN' (Random)</option>
+                              <option value="11th Mini Album 'SEVENTEENTH HEAVEN' KiT ver">11th Mini Album 'SEVENTEENTH HEAVEN' KiT ver</option>
+                              <option value="11th Mini Album 'SEVENTEENTH HEAVEN' Weverse Albums ver.">11th Mini Album 'SEVENTEENTH HEAVEN' Weverse Albums ver.</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Alamat</label>
+                            <input id="alamat" name="alamat" type="text" placeholder="Masukkan alamat" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Harga</label>
+                            <select name="harga" id="harga" class="form-control">
+                              <option value="" disabled selected>Pilih jenis harga</option>
+                              <option value="160000">Rp.160.000</option>
+                              <option value="780000">Rp.780.000</option>
+                              <option value="250000">Rp.250.000</option>
+                              <option value="280000">Rp.280.000</option>
+                              <option value="150000">Rp.150.000</option>
+                            </select>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary mt-2">Beli Paket</button>
+                        </div>
+                </form>
+                <script>
+                    var registration_success_alert = "{{ msg2 }}";
+                    if (registration_success_alert) {
+                        alert(registration_success_alert);
+                    }
+                </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+  var mainImg = document.getElementById("main-img");
+  var smallImg = document.getElementsByClassName("small-img"); 
+  
+  for(let i=0; i<5; i++){
+                smallImg[i].onclick = function(){
+                mainImg.src = smallImg[i].src;
+              }
+
+  }
+  
+
+</script>
+<script>
+  var mainImg = document.getElementById("main-img");
+  var smallImg = document.getElementsByClassName("small-img");
+  var paketTitle = document.querySelector(".langganan-paket h3");
+  var paketPrice = document.querySelector(".langganan-paket h2");
+
+  for (let i = 0; i < 5; i++) {
+    smallImg[i].onclick = function () {
+      mainImg.src = smallImg[i].src;
+
+      // Ganti teks "Paket Kelas", judul, dan harga sesuai dengan gambar yang diklik
+      switch (i) {
+        case 0:
+          paketTitle.innerText = "11th Mini Album 'SEVENTEENTH HEAVEN' (Set)";
+          paketPrice.innerText = "Rp.780.000";
+          break;
+        case 1:
+          paketTitle.innerText = "11th Mini Album 'SEVENTEENTH HEAVEN' (Random)";
+          paketPrice.innerText = "Rp.250.000";
+          break;
+        case 2:
+          paketTitle.innerText = "11th Mini Album 'SEVENTEENTH HEAVEN' KiT ver";
+          paketPrice.innerText = "Rp.280.000";
+          break;
+        case 3:
+          paketTitle.innerText = "11th Mini Album 'SEVENTEENTH HEAVEN' Weverse Albums ver.";
+          paketPrice.innerText = "Rp.150.000";
+          break;
+      }
+    };
+  }
+</script>
+<footer class="mt-5 py-5 text-center">
+{% endblock %}

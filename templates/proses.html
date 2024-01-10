@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>SVT Store</title>
+{% endblock %}
+{% block body %}
+<div class="main-content" href="proses.html">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://pbs.twimg.com/media/F8UYUZ8asAAAA1d?format=png&name=240x240" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: black;" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="album">Album</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="keranjang">Keranjang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="proses">Status</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a href="/logout" class="btn btn-primary" style="margin-left: 8px;">Logout</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+        </div>
+    </div>
+  </header>
+  <!-- Detail Paket Section -->
+  <div class="container">
+    <br>
+    <h2 class="detil text-center mt-5">Detail Pesanan</h2>
+    <p  class="proses text-center">On Process</p>
+    <br>
+    <table class="table table-striped" widht="100%">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Pilihan Album</th>
+          <th>Alamat</th>
+          <th>Harga</th>
+          <br>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in detail %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }} <button type="button" class="btn btn-success">Dikemas</button></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endblock %}

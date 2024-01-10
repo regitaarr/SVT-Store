@@ -1,0 +1,160 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>SVT Store</title>
+{% endblock %}
+{% block body %}
+<div class="main-content" href="album.html">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://pbs.twimg.com/media/F8UYUZ8asAAAA1d?format=png&name=240x240" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: black;" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="album">Album</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="keranjang">Keranjang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="proses">Status</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <a href="/logout" class="btn btn-primary" style="margin-left: 8px;">Logout</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <style>
+    div.caption{
+      color: black;
+      margin-top: 80px;
+      margin-left: 45px;
+    }
+
+    div.heaven{
+      margin-left: 25px;
+    }
+
+    div.gallery {
+      margin: 22px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 200px;
+      margin-top: 10px;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    div.caption2{
+      color: black;
+      margin-top: 80px;
+      margin-left: 25px;
+    }
+
+    div.ima{
+      margin-left: 25px;
+    }
+
+    div.caption3{
+      color: black;
+      margin-top: 80px;
+      margin-left: 25px;
+      padding-left: 100px;
+    }
+
+    div.fml{
+      margin-left: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="album1">
+    <div class="caption">
+      <b>11th Mini Album 'SEVENTEENTH HEAVEN'</b>
+    </div>
+
+    <div class="heaven">
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://cdn-contents.weverseshop.io/public/shop/f8ac8a0eacae5e3c3f0b6a9bf33b4cf3.png?q=95&w=720" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">
+          <p>11th Mini Album 'SEVENTEENTH HEAVEN' <br>Carat Ver. (Random)</p>
+          <b>Rp.160.000</b>
+          <br><br>
+          <a class="btn btn-primary" href="keranjang">Beli Album</a>
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://cdn-contents.weverseshop.io/public/shop/98f1984478a759070fc27ba389813395.png?q=95&w=720" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">
+          <p>11th Mini Album 'SEVENTEENTH HEAVEN' (Set)</p>
+          <br>
+          <b>Rp.780.000</b>
+          <br><br>
+          <a class="btn btn-primary" href="keranjang">Beli Album</a>
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://cdn-contents.weverseshop.io/public/shop/16a5a5f0b2361e59bf0b57a19b2adf59.png?q=95&w=720" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">
+          <p>11th Mini Album 'SEVENTEENTH HEAVEN' (Random)</p>
+          <b>Rp.250.000</b>
+          <br><br>
+          <a class="btn btn-primary" href="keranjang">Beli Album</a>
+        </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://cdn-contents.weverseshop.io/public/shop/79906fcd4b318f6df0d9a9963f7877f4.png?q=95&w=720" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">
+          <p>11th Mini Album 'SEVENTEENTH HEAVEN' <br>KiT ver</p>
+          <b>Rp.280.000</b>
+          <br><br>
+          <a class="btn btn-primary" href="keranjang">Beli Album</a>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://cdn-contents.weverseshop.io/public/shop/ab17aa278576f0e6a06dfcba62c24de7.png?q=95&w=720" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">
+          <p>11th Mini Album 'SEVENTEENTH HEAVEN' Weverse Albums ver.</p>
+          <b>Rp.150.000</b>
+          <br><br>
+          <a class="btn btn-primary" href="keranjang">Beli Album</a>
+        </div>
+      </div>
+{% endblock %}

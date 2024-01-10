@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <title>SVT Store</title>
+{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://pbs.twimg.com/media/F8UYUZ8asAAAA1d?format=png&name=240x240" alt="Logo" 
+                width="75" height="40" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+    <style>
+        .navbar {
+            z-index: 1; 
+        }
+        
+        .background img {
+            object-fit: cover;
+            object-position: center top; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <div class="background">
+        <img src="https://pbs.twimg.com/media/F8sXMYmaQAA1-4-?format=jpg&name=large">
+        <div class="login-container">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="text-center">Login Here </h5> 
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input name="inpEmail" type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input name="inpPass" type="password" class="form-control">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary mt-4">Login</button>
+                        </div>
+                    </br>
+                        <p class="bottom">Don't have an account?  <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p>
+                    </form>
+                    <script>
+                        var loginAlertMessage = "{{ login_alert }}";
+                        if (loginAlertMessage) {
+                            alert(loginAlertMessage);
+                        }
+                    </script>  
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
